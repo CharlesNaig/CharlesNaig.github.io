@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- Meta Data-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hatry4, Devhatry4, Programming, Front-end Developer, Html, Css, JavaScript, PHP, TypeScript, Sass, Student, Gamer">
+    <meta name="author" content="</> Devhatry4">
+    <meta property="og:site_name" content="Hatry4">
+    <meta property="og:image" content="https://official-hatry4xyz.devhatry4.repl.co/assets/images/hatry4.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hatry4.xyz">
+    <meta property="og:title" content="Hatry4 - 404 Error">
+    <meta name="theme-color" content="#32a864">
+    <meta name="description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to code and design websites. And I’m a Front End / Back End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚"/>
+  
+    <!-- Meta Twitter Data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hatry4qt">
+    <meta property="twitter:title" content="Hatry4 offical website">
+    <meta name="twitter:creator" content="@hatry4qt">
+    <meta name="twitter:description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to code and design websites. And I’m a Front End / Back End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚
+      ">
+    <meta name="twitter:image" content="./assets/images/hatry4.png">
+    
+     
+    <!-- title of the browser tab -->
+    <title>Hatry4 - 404 Error</title>
+
+    <!-- Font and Icons  -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+	  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/logo/hatry4-D.ico">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Saira+Stencil+One&text=Hatry4&display=swap">
+  
+
+    <!-- css libraries file -->
+    <link rel="stylesheet" href="data/styles/css/libraries.min.css">
+
+    <!-- css main style file -->
+    <link rel="stylesheet" href="data/styles/css/style.css">
+
+    <!-- scss libraries file -->
+    <link rel="stylesheet/scss" href="data/styles/scss/libraries.min.scss" type="text/css">
+
+    <!-- scss main files-->
+    <link rel="stylesheet/scss" href="data/styles/scss/style.scss" type="text/css">
+
+
+<body>
+    <div id="app">
+      <div id="app-inner" ref="appRef"
+        :class="[savedTheme, {'enable-focus-style': isAnyFocus}]"
+        @click="isAnyFocus = false"
+        @keyup.tab="isAnyFocus = true">
+
+          <!-- start preloader-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <div id="preloader">
+            <div class="loader">
+              <ul>
+                <h1 class="loader_text" id="loader_text">H</h1>
+              </ul>
+             <div class="loader_bar" id="loader_bar"></div>
+           </div>
+          </div>
+        <!-- end preloader-->
+
+            <!-- start of header -->
+        <header class="hide-in-preloading" :class="{
+          'big-header': isHeaderBig,
+          'small-header': !isHeaderBig,
+          'header-hidden': isHeaderHidden
+        }">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="logo" title="Hatry4">
+                        <h1><a href="#">Hatry4</a></h1>
+                    </div>
+
+                    <!-- nav links -->
+                    <nav :class="{'menu-open': isNavMenuOpen}" ref="headerNav">
+
+                        <!-- nav menu links -->
+                        <ul class="nav-links">
+                            <li v-for="link in navLinks" :key="link.url">
+                                <a :href="link.url" @click="closeNavMenu">
+                    {{ link.title.en }}
+                  </a>
+                            </li>
+                        </ul>
+
+                        <!-- menu content in big devices (hidden in mobile/tablet) --> 
+                        <div class="desktop-menu-content" tabindex="-1">
+                            <div class="container">
+
+                                <!-- about us -->
+                                <div class="about-us">
+                                    <p>
+                                        Hi! I’m Charles or hatry4, and I’m a Front End developer who has feature to be a professional full stack developer and I enjoying to code like JavaScript, Html, Css, and more. I’m always trying learn new language, tools, and skills. And i’m still looking for Developer Team. Fun fact I play games and go to the School Always.
+                                    </p>
+                                </div>
+
+                                <!-- contact info -->
+                                <ul class="contact-info row">
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Email</h4>
+                                        <ul>
+                                          <li><a href="mailto:cm122927@gmail.com">• cm122927@gmail.com</a></li>
+                                            <li><a href="mailto:hatry4@gmail.com">• hatry4@gmail.com</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Location</h4>
+                                        <ul>
+                                            <li>
+                                                • Asia/Manila | Philippines
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Discord</h4>
+                                        <ul>
+                                          <li><a href="https://discord.com/users/573709909594734603" class="ltr-dir">• &#60;&#47;&#62; Devhatry4#3429</a></li>
+                                          <li><a href="https://discord.gg/2x3HCgg4d9" class="ltr-dir">• Kryptonite</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- options icons -->
+                    <ul class="options-icons"> 
+
+                        <!-- theme switcher button -->
+                        <li class="theme-switcher">
+                            <button :class="savedTheme" title="Change Mode" @click="changeAppTheme"></button>
+                        </li>
+
+                        <!-- hamburger button -->
+                        <li class="hamburger-btn" :class="{'open': isNavMenuOpen}">
+                            <button @click="toggleNavMenu" title="Toggle Side Menu" aria-label="Toggle Side Menu" ref="navMenuToggleBtn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!-- end of header -->
+        
+            <!-- start of 404 page -->
+            <div class="not-found-page page">
+                <div class="not-found-content">
+                    <div class="container">
+                      
+                      <!--div class="not-found-title">404</div-->
+                        <div class="not-found-img">
+                           <img alt="404" 
+src="https://illustatus.herokuapp.com/?title=&fill=lightgreen">                          </div>
+                                
+                        <div class="not-found-text">
+                          <ul>
+
+                            <h2 class="title">Oops! Page not found</h2>
+                            <p>We're sorry, we couldn't find the page you requested. The page you were looking for doesn't exist or is temporarily unavailable.</p>
+                            <p></p>
+                          </ul>
+                        </div>
+                        <a href="../#" class="btn btn-primary"><i class="fa-solid fa-arrow-left-from-bracket"></i> Go Home</a>
+                      
+                        <a href="../#contact" class="btn btn-outline-light">Contact me</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end of 404 page --> 
+            
+            <!-- start of footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- logo -->
+                            <div class="logo" title="hatry4">
+                                <h1><a href="#">Hatry4</a></h1>
+                            </div>
+                          <div class="motto"><p>"Developer is organism that turns coffee to code."</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                            &copy; Developed by
+                            <a href="https://github.com/hatry4" target="_blank" rel="noopener">Hatry4</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end of footer -->
+
+            <!-- scroll to top button -->
+            <button ref="scrollTopBtn" :class="['scroll-to-top', isScrollTopBtnDisplayed && 'show-scrollTop']" title="Back To Top" tabindex="0" @click="scrollToTop">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </button>
+
+            <!-- toast notifications -->
+            <ul class="notifications-container">
+                <transition-group name="notify">
+                    <li v-for="notify of notifications" :key="notify.id" :id="notify.id" :class="['notification', 'show', notify.className, notify.time && 'timer']">
+                        {{ notify.msg }}
+                        <i class="fa fa-times link-hover" aria-hidden="true" @click="dismissNotify(notify.id)"></i>
+                        <span v-if="notify.time" class="disappearing-time" :style="{ 'animation-duration': notify.time + 'ms' }"></span>
+                    </li>
+                </transition-group>
+            </ul>
+
+            <!-- ajax loading -->
+            <div v-show="isAjaxLoading" class="ajax-loading">
+                <span></span>
+            </div>
+        </div>
+    </div>
+      
+    <!-- js plugins file -->
+    <script src="data/scripts/plugins.min.js"></script>
+
+    <!-- main script file -->
+    <script src="data/scripts/main.min.js"></script>
+
+    <!-- script js file -->
+    <script src="data/scripts/script.js"></script>
+
+    <!-- script js file -->
+    <script src="data/scripts/clarity.js"></script>
+    
+    <!-- iconify plugin file -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+
+    <!-- fontawesome plugin file -->
+    <script src="https://kit.fontawesome.com/c1a5282429.js" crossorigin="anonymous"></script>
+            
+<!-- Code by </> Devhatry4#3429 -->
+      <!-- Credits to hatry4 / charles -->

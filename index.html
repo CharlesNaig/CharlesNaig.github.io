@@ -2,48 +2,91 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <!-- Meta Data-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devhatry4, Hatry4 Offical Website! / Hi! I’m Charles or hatry4, and I’m a stack developer who has feature to be a professional full stack developer.">
-    <meta name="keywords" content="hatry4, Devhatry4, Programming, Developer, Html, Css, JavaScript, Student, Gamer">
-    <link href="https://use.fontawesome.com/releases/v5.15/css/all.css">
+    <meta name="keywords" content="hatry4, Devhatry4, Programming, Front-end Developer, Html, Css, JavaScript, PHP, TypeScript, Sass, Student, Gamer">
+    <meta name="author" content="</> Devhatry4">
+    <meta property="og:site_name" content="Hatry4">
+    <meta property="og:image" content="https://official-hatry4xyz.devhatry4.repl.co/assets/images/hatry4.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hatry4.xyz">
+    <meta property="og:title" content="Hatry4 - Hi there~">
+    <meta name="theme-color" content="#32a864">
+    <meta name="description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to code and design websites. And I’m a Front End / Back End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚"/>
+  
+    <!-- Meta Twitter Data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hatry4qt">
+    <meta property="twitter:title" content="Hatry4 offical website">
+    <meta name="twitter:creator" content="@hatry4qt">
+    <meta name="twitter:description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to code and design websites. And I’m a Front End / Back End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚
+      ">
+    <meta name="twitter:image" content="./assets/images/hatry4.png">
+    
+     
     <!-- title of the browser tab -->
-    <title>Hatry4</title>
+    <title>Hatry4 - Hi there~</title>
+
+    <!-- Font and Icons  -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+	  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
 
     <!-- favicon -->
-    <link rel="icon" href="./assets/images/logo.ico">
+    <link rel="icon" href="assets/images/logo/hatry4-D.ico">
 
     <!-- fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Saira+Stencil+One&text=Nafie&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Saira+Stencil+One&text=Hatry4&display=swap">
+  
 
     <!-- css libraries file -->
-    <link rel="stylesheet" href="styles/libraries.min.css">
+    <link rel="stylesheet" href="data/styles/css/libraries.min.css">
 
-    <!-- main style file -->
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- css main style file -->
+    <link rel="stylesheet" href="data/styles/css/style.css">
+
+    <!-- scss libraries file -->
+    <link rel="stylesheet/scss" href="data/styles/scss/libraries.min.scss" type="text/css">
+
+    <!-- scss main files-->
+    <link rel="stylesheet/scss" href="data/styles/scss/style.scss" type="text/css">
+
 </head>
 
 <body>
     <div id="app">
-        <div id="app-inner" ref="appRef" :class="[savedTheme, {'enable-focus-style': isAnyFocus}]" @click="isAnyFocus = false" @keyup.tab="isAnyFocus = true">
+      <div id="app-inner" ref="appRef"
+        :class="[savedTheme, {'enable-focus-style': isAnyFocus}]"
+        @click="isAnyFocus = false"
+        @keyup.tab="isAnyFocus = true">
 
-            <div class="circle-cursor circle-cursor-outer" ref="circleCursorOuter"></div>
-            <div class="circle-cursor circle-cursor-inner" ref="circleCursorInner"></div>
-
-            <!-- start preloader-->
-            <transition name="preloader">
-                <div class="preloader" v-if="isPreloading">
-                    <div class="circle">
-                        <div class="double-bounce1"></div>
-                        <div class="double-bounce2"></div>
-                    </div>
-                </div>
-            </transition>
-            <!-- end preloader-->
+          <!-- start preloader-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <div id="preloader">
+            <div class="loader">
+              <ul>
+                <h1 class="loader_text" id="loader_text">H</h1>
+              </ul>
+             <div class="loader_bar" id="loader_bar"></div>
+           </div>
+          </div>
+        <!-- end preloader-->
 
             <!-- start of header -->
-            <header :class="{
+        <header class="hide-in-preloading" :class="{
           'big-header': isHeaderBig,
           'small-header': !isHeaderBig,
           'header-hidden': isHeaderHidden
@@ -51,7 +94,7 @@
                 <div class="container">
                     <!-- logo -->
                     <div class="logo" title="Hatry4">
-                        <h1><a href="index.html">Hatry4</a></h1>
+                        <h1><a href="#">Hatry4</a></h1>
                     </div>
 
                     <!-- nav links -->
@@ -73,7 +116,7 @@
                                 <!-- about us -->
                                 <div class="about-us">
                                     <p>
-                                        Hi! I’m Charles or hatry4, and I’m a discord bot developer and website developer who has feature to be a professional full stack developer and I enjoying to code like JavaScript, Html, Css, and more. I’m always trying learn new language, tools, and skills. And i’m still looking for Developer Team. Fun fact I play games and go to the School Always.
+                                        Hi! I’m Charles or hatry4, and I’m a Front End developer who has feature to be a professional full stack developer and I enjoying to code like JavaScript, Html, Css, and more. I’m always trying learn new language, tools, and skills. And i’m still looking for Developer Team. Fun fact I play games and go to the School Always.
                                     </p>
                                 </div>
 
@@ -82,22 +125,23 @@
                                     <li class="col-lg-4">
                                         <h4 class="block-title">Email</h4>
                                         <ul>
-                                          <li><a href="mailto:cm122927@gmail.com">cm122927@gmail.com</a></li>
-                                            <li><a href="mailto:hatry4@gmail.com">hatry4@gmail.com</a></li>
+                                          <li><a href="mailto:cm122927@gmail.com">• cm122927@gmail.com</a></li>
+                                            <li><a href="mailto:hatry4@gmail.com">• hatry4@gmail.com</a></li>
                                         </ul>
                                     </li>
                                     <li class="col-lg-4">
                                         <h4 class="block-title">Location</h4>
                                         <ul>
                                             <li>
-                                                Asia/Manila | Philippines
+                                                • Asia/Manila | Philippines
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="col-lg-4">
                                         <h4 class="block-title">Discord</h4>
                                         <ul>
-                                            <li><a href="https://discord.gg/2x3HCgg4d9" class="ltr-dir">Light Devs™</a></li>
+                                          <li><a href="https://discord.com/users/573709909594734603" class="ltr-dir">• &#60;&#47;&#62; Devhatry4#3429</a></li>
+                                          <li><a href="https://discord.gg/2x3HCgg4d9" class="ltr-dir">• Kryptonite Development</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -107,14 +151,7 @@
 
                     <!-- options icons -->
                     <ul class="options-icons">
-
-                        <!-- lang switcher button -->
-                        <li class="lang-switcher">
-                            <a href="#" title="">
-                  <img src="assets/images/langs/ar.png" alt="">
-                </a>
-                        </li>
-
+                      
                         <!-- theme switcher button -->
                         <li class="theme-switcher">
                             <button :class="savedTheme" title="Change Mode" @click="changeAppTheme"></button>
@@ -133,11 +170,11 @@
             </header>
             <!-- end of header -->
 
-            <!-- start of hero section -->
+            <!-- start of home section -->
             <div id="home" class="hero-section" ref="heroSection" data-paneffect="true">
                 <div class="hero-img">
                     <div class="layer" v-clone>
-                        <img src="./assets/images/home-img.png">
+                        <img src="./assets/images/img.png">
                     </div>
                 </div>
 
@@ -145,56 +182,48 @@
                     <h2>
                         May the code be with you
                     </h2>
-                    <a href="https://buymeacoffee.com/Devhatry4" class="btn"><img src="assets/images/icons/coffee.png"/> Buy me a Coffe</a>
+                    <a href="https://buymeacoffee.com/Devhatry4" class="btn"><img src="assets/images/icons/buymeacoffee.png" width="35" height="35"/> Buy me a Coffee</a>
+                  
+                  <a href="https://www.patreon.com/hatry4" class="btn"><img src="assets/images/icons/patreon.png" width="35" height="35"/> Become a patron</a>
+                  
+                    <a href="https://ko-fi.com/Devhatry4" class="btn"><img src="assets/images/icons/ko-fi.png" width="35" height="35"/> Support me on Ko-fi </a>
                 </div>
-
-                <div class="social">
-                    <ul>
-                        <li>
-                            <a href="https://facebook.com/charles.marcelo.devhatry4" target="_blank" rel="noreferrer" v-tooltip="{text: 'Facebook', dir: 'right'}">
-                  <img src="assets/images/icons/social/facebook.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/hatry41" target="_blank" rel="noreferrer" v-tooltip="{text: 'Twitter', dir: 'right'}">
-                  <img src="assets/images/icons/social/twitter.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@hatry4qt" target="_blank" rel="noreferrer" v-tooltip="{text: 'Tiktok', dir: 'right'}">
-                  <img src="assets/images/icons/social/tiktok.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/hatry4" target="_blank" rel="noreferrer" v-tooltip="{text: 'Github', dir: 'right'}">
-                  <img src="assets/images/icons/social/github.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com/charles.hatry4qt" target="_blank" rel="noreferrer" v-tooltip="{text: 'Instagram', dir: 'right'}">
-                  <img src="assets/images/icons/social/instagram.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://pinterest.com/hatry4qt" target="_blank" rel="noreferrer" v-tooltip="{text: 'Pinterest', dir: 'right'}">
-                  <img src="assets/images/icons/social/pinterest.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://twitch.com/chatry4" target="_blank" rel="noreferrer" v-tooltip="{text: 'Twitch', dir: 'right'}">
-                  <img src="assets/images/icons/social/twitch.png" width="30" height="30"/>
-                </a>
-                        </li>
-                        <li>
-                            <a href="https://www.reddit.com/user/hatry4" target="_blank" rel="noreferrer" v-tooltip="{text: 'Reddit', dir: 'right'}">
-                  <img src="assets/images/icons/social/reddit.png" width="30" height="30"/>
-                </a>
-                        </li>
-                    </ul>
-                        </li>
-                </div>
+              <div class="social">
+                <ul>
+                    <li>
+                    <a href="https://github.com/hatry4" target="_blank" rel="noreferrer" v-tooltip="{text: 'Github', dir: 'right'}">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                  <li>
+                    <a href="https://facebook.com/charlesmarcelo.hatryy" target="_blank" rel="noreferrer" v-tooltip="{text: 'Facebook', dir: 'right'}">
+                 <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                  <li>
+                    <a href="https://instagram.com/charlesynnaig" target="_blank" rel="noreferrer" v-tooltip="{text: 'Instagram', dir: 'right'}">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                  <li>
+                    <a href="https://tiktok.com/@hatry4qt" target="_blank" rel="noreferrer" v-tooltip="{text: 'Tiktok', dir: 'right'}">
+                  <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                  <li>
+                    <a href="https://linkedin.com/in/charlesqt-hatry4/" target="_blank" rel="noreferrer" v-tooltip="{text: 'Linkedin', dir: 'right'}">
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                  <li>
+                    <a href="https://twitter.com/hatry4qt" target="_blank" rel="noreferrer" v-tooltip="{text: 'Twitter', dir: 'right'}">
+                  <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                </ul>
+              </div>
             </div>
-            <!-- end of hero section -->
+            <!-- end of home section -->
 
                <!-- start of statistics section -->
             <div id="statistics" class="statistics-section section">
@@ -214,25 +243,25 @@
                                 </a>
                             </li>
                             <li class="col-sm-12 col-md-6 col-lg-4">
-                                <a href="https://github.com/hatry4?tab=repositories">
+                                <a href="#works">
                                     <div class="icon">
                                         <img src="assets/images/icons/check-mark.png" alt="Completed Projects">
                                     </div>
                                     <div class="text">
-                                        <h3>12+</h3>
-                                        <strong>Completed Works</strong>
+                                        <h3>5+</h3>
+                                        <strong>All of my projects</strong>
                                     </div>
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="col-sm-12 col-md-6 col-lg-4">
-                                <a href="#">
+                                <a>
                                     <div class="icon">
                                         <img src="assets/images/icons/happy.png" alt="Followers">
                                     </div>
                                     <div class="text">
-                                        <h3>550+</h3>
-                                        <strong>Followers</strong>
+                                        <h3>4.0</h3>
+                                        <strong>Rating</strong>
                                     </div>
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </a>
@@ -260,22 +289,98 @@
                             <div class="text-box-inline">
                                 <span class="subtitle">about me</span>
                                 <h2>
-                                    Need a Developer
-                                    <br> I can Help You!
+                                  I'm Charles
+                                  <br>
+                                  And I'm a Front End developer
                                 </h2>
-                                <p>
-                                    Hi! I’m Charles or hatry4, and I’m a Developer, Gamer and Student who has feature to be a professional full stack developer and I enjoying to code like JavaScript, Html, Css, and more. I’m always trying learn new language, tools,
-                                    and skills. And i’m still looking for Developer Team. Fun fact I play games and go to the School Always
-                                </p>
-                                <div class="btns-container">
-                                    <a href="#contact" class="btn btn-primary"><img src="assets/images/icons/hire-me.png"/> Hire Me</a>
-                                    <a href="https://paypal.me/hatry4" class="btn btn-outline-light"><img src="assets/images/icons/donate.png"/> Donate</a>
+                              <p>
+                                Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to develop and design websites. And I’m a Front End Developer, Gamer, and Student Fun fact is I still play games.
+                              </p>
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <ul>
+                                    <li> <i class="fas fa-user"></i><strong> Name:</strong> Charles / hatry4
+                                    </li>
+                                    <li> <i class="fas fa-birthday-cake" style=""></i><strong> Birthday:</strong> 12/29/2007
+                                    </li>
+                                <li> <i class="fas fa-map-location-dot" style=""></i><strong> Country:</strong> Philippines</li>
+                                  </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                  <ul>
+                                    <li><i class="fas fa-language" style=""></i><strong> Language:</strong> Fil/En
+                                    </li>
+                                    <li><i class="fas fa-briefcase"></i><strong> Freelance:</strong> Available
+                                          </li>
+                                    <li><i class="fas fa-graduation-cap"></i><strong> Course:</strong> Full Stack Dev (IT)
+                                    </li>
+                                  </ul>
+                                </div>
+                                <p><br></p>
+                                  <ul>
+                                    <div id="hobbies" class="hobbies">
+                                      <div class="hobbies-box">
+                                      <div class="hobbies-content">
+                                        <ul class="hobbies-icons">
+                                          <h4 style="text-align: center;">My Hobbies</h4>
+                                          <li>
+                                            <i class="fa-solid fa-code"></i>
+                                            <span>Coding</span>
+                                          </li>
+                                          <li>
+                                            <i class="fa-solid fa-gamepad"></i>
+                                            <span>Gaming</span>
+                                          </li>
+                                          <li class="br screen991"></li>
+                                          <li>
+                                            <i class="fa-solid fa-basketball"></i>
+                                            <span>Basketball</span>
+                                          </li>
+                                          <li class="br screen450"></li>
+                                          <li>
+                                            
+                                          <li>
+                                            <i class="fa-solid fa-bicycle"></i>
+                                            <span>Cycling</span>
+                                          </li>
+                                          <li>
+                                            <i class="fa-solid fa-tv"></i>
+                                            <span>Anime</span>
+                                          </li>
+                                        
+                                          <li class="br screen991"></li>
+                                          <li>
+                                            <i class="fa-solid fa-hashtag"></i>
+                                            <span>Social Media</span>
+                                          </li>
+                                          <li class="br screen450"></li>
+                                          <li>
+                                            <i class="fa-solid fa-music"></i>
+                                            <span>Music</span>
+                                          </li>
+                                          <li>
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <span>Hangout</span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </ul>
+                                <ul class="spaces">
+                                <li>
+                                    <br>
+                                </li>
+                            </ul>
+                     <div class="btns-container">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#home" class="btn btn-outline-light">Donate</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
             <!-- end of about section -->
 
             <!-- start of skills section -->
@@ -289,10 +394,10 @@
                                 <span class="subtitle">my skills</span>
                                 <h2>
                                     What My Programming
-                                    <br> Languge Skills and Tools?
+                                    <br> Language Skills and Tools?
                                 </h2>
                                 <p>
-                                    I develop simple, usable things and responsive things that can help you, i tottaly love programming. Here my languge and tools that i use to.
+                                    I use a lot of language for programming and more, and this language and tools are the favorites that I use to create some projects for my skills.
                                 </p>
                                 <div ref="skillsSwitchBtn" class="toggle-switch-btn">
                                     <input id="skills-list" type="radio" value="skills" v-model="skillsType" checked>
@@ -327,66 +432,107 @@
                     </div>
                 </div>
             </div>
-            <!-- end of skills section -->
-            
-<!-- start of grap section -->
-    <section class="grap" id="grap">
-        <div class="max-width">
-          <div class="container">
-            <div class="grap-content">
-                <div class="column left">
-                    <div class="text"></div>
-                </div>
-                <div class="column right">
-                  <p align="left">
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/javascript.png" width="30">| JavaScript</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/html.png" width="30">| HTML</span>
-                            <span>69%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/css.png" width="30">| CSS</span>
-                            <span>52%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/typescript.png" width="30">| TypeScript</span>
-                            <span>48%</span>
-                        </div>
-                        <div class="line ts"></div>
-                    </div>
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/yaml.png" width="30">| Yaml</span>
-                            <span>15%</span>
-                        </div>
-                        <div class="line yaml"></div>
-                    <div class="grap">
-                        <div class="info">
-                            <span><img src="./assets/images/skills/languages/python.png" width="30">| Python</span>
-                            <span>7%</span>
-                        </div>
-                        <div class="line py"></div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-            <!-- end of grap section -->
+            <!-- end of skills section --> 
 
+            <!-- Start Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2></h2>
+            <div class="skills-content">
+                <div class="progress-content">
+                    <div class="personal-skills">
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:javascript-fill"></span> JavaScript</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:html-fill"></span> Html</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:css-fill"></span> Css</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:node-fill"></span> NodeJs</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="professional-skills">
+                        <h4>
+                            
+                        </h4>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:php-fill"></span> PHP</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="akar-icons:sass-fill"></span> Sass</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="simple-icons:gnubash"></span> Bash</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-data">
+                                <span class="bar-title"><span class="iconify" data-icon="file-icons:yaml-alt4"></span> Yaml</span>
+                                <span class="bar-value"><strong>0</strong> %</span>
+                            </div>
+                            <div class="bar-line">
+                                <span class="bar-emptyFill"></span>
+                                <span class="bar-fill"></span>
+                            </div>
+                      </div>
+                    </div>
+                 </div>
+              </div>
+          </div>
+    </section>
+    <!-- End Skills -->
+          
             <!-- start of experience section -->
             <div id="experience" class="experience-section section" tabindex="-1">
                 <div class="container">
@@ -418,11 +564,11 @@
                             <div class="text-box-inline">
                                 <span class="subtitle">experience</span>
                                 <h2>
-                                    11+ Months of Experience
+                                    1+ Year of Experience
                                     <br> With Many Experiences!
                                 </h2>
                                 <p>
-                                    I have been developing websites and discord bot for 11 months and i know for sure that i can reach full stack developer, I have been a learner and a reliable developer partner for projects. You will get a decent
+                                    I have been developing websites and discord bot for 1 year and i know for sure that i can reach full stack developer, I have been a learner and a reliable developer partner for projects. You will get a decent
                                     result as you expect.
                                 </p>
                             </div>
@@ -431,8 +577,177 @@
                 </div>
             </div>
             <!-- end of experience section -->
-     
-            <!-- start of contact section -->
+
+           <!-- start of portfolio section -->
+        <div id="works" class="portfolio-section section" tabindex="-1">
+          <div class="container">
+            <div class="section-content">
+
+              <!-- portfolio items -->
+              <ul class="portfolio-items has-works" ref="portfolioItems" data-no-works-msg="No works to load">
+                <li>
+                  <!-- text box -->
+                  <div class="text-box-inline">
+                    <span class="subtitle">my works</span>
+                    <h2>
+                      My Works and Projects.
+                    </h2>
+                    <p>
+                      I develop simple, usable things and responsive things that can help you but not that much, and you can download my works by clicking the buttons to direct to my repository, and you can suggest more porject to create so i can post it to our works collections.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- start items list -->
+                <li class="portfolio-item"
+        q          for="work in filteredPortfolioItems"
+                  key="Website">
+                  <a href="https://github.com/hatry4/Confession-Bot-v1" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://github.com/hatry4/Confession-Bot-v1/blob/main/confession.jpg?raw=true" alt="confession">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">Discord confession bot</h3>
+                      <div class="date">11/5/2021</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="portfolio-item"
+                  for="work in filteredPortfolioItems"
+                  key="Javascirpt">
+                  <a href="https://github.com/hatry4/Aboutme-website/" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://github.com/hatry4/Aboutme-website/blob/main/website-work-1.PNG?raw=true" alt="js">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">about-me card website</h3>
+                      <div class="date">7/26/2021</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="portfolio-item"
+                  for="work in filteredPortfolioItems"
+                  key="Website">
+                  <a href="https://github.com/hatry4/Matrix-Rain" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://github.com/hatry4/Matrix-Rain/blob/bfacac0e50b5a926bb8bafa0a7c20017f195ea47/matrix-rain.gif?raw=true" alt="matrix">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">Matrix console</h3>
+                      <div class="date">9/25/2021</div>
+                    </div>
+                  </a>
+                </li>
+                <li class="portfolio-item"
+                  for="work in filteredPortfolioItems"
+                  key="Website">
+                  <a href="https://github.com/hatry4" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://cdn.discordapp.com/attachments/973279509820358747/973279636911947866/naturecord.png" alt="ts">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">Naturecord</h3>
+                      <div class="date">7/5/2022</div>
+                    </div>
+                  </a>
+                </li>
+                 <li class="portfolio-item"
+                  for="work in filteredPortfolioItems"
+                  key="Website">
+                  <a href="https://top.gg/bot/848911707761410053" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://cdn.discordapp.com/attachments/975775566038978570/1000064869455892620/unknown.png" alt="haruki">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">Haruki</h3>
+                      <div class="date">5/31/2021</div>
+                    </div>
+                  </a>
+                </li>
+                <!--li class="portfolio-item"
+                  for="work in filteredPortfolioItems"
+                  key="Website">
+                  <a href="https://github.com/hatry4" target="_blank" rel="noopener">
+                    <div class="item-img">
+                      <img src="https://www.dogsbody.com/wp-content/uploads/PHP_Logo.png" alt="php">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">PHP</h3>
+                      <div class="date">12/29/2007</div>
+                    </div>
+                  </a>
+                </li>--
+                <!-- end items list -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of portfolio section -->            
+                
+            <!-- start of services section -->
+          <section id="services" class="services">
+          <div id="services" class="services-section section" tabindex="-1">
+           <div class="container">
+            <div class="section-title">
+              <div class="section-content row">
+              <span class="subtitle">services</span>
+              <h2 class="title">
+                What Possible
+                <br>
+                Things That can i do?
+              </h2>
+                <p>
+                I can do possible things like discord bots and enhance your website, I can do anything but not all using my little developer talent and more things you requested to I do<ul></ul>
+                </p>
+                </div>
+              </div>
+            <div class="row">
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+						<div class="icon-box iconbox-green">
+							<div class="icon">
+								<svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+									<path stroke="none" stroke-width="0" fill="#f5f5f5"	d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+									</path>
+								</svg>
+								<i class="fad fa-globe"></i>
+							</div>
+							<h4><a>Website</a></h4>
+							<p>I will Create or Re-Design your website, Everything is customizable, Just tell me what you want And I'll pretty much do it for you, and if you Want to add it with functions ill will do my best for it.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+						data-aos-delay="200">
+						<div class="icon-box iconbox-blue">
+							<div class="icon">
+								<svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+									<path stroke="none" stroke-width="0" fill="#f5f5f5"	d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+									</path>
+								</svg>
+								<i class="fad fa-robot"></i>
+							</div>
+							<h4><a>Discord Bot</a></h4>
+							<p>It can be anything type of discord bot that I can do any features but not all, Limited to 1 server only because it's not a public bot for the discord community.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+						data-aos-delay="300">
+						<div class="icon-box iconbox-red">
+							<div class="icon">
+								<svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+									<path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+									</path>
+								</svg>
+								<i class="fad fa-pen-fancy"></i>
+							</div>
+							<h4><a>Web Designer</a></h4>
+							<p>I'll Design your website like a pro but not that much, but ill try my best to design your website and edit a lot of things that what on your website using my skills.</p>
+						</div>
+          </div>
+        </div>
+  </section>         
+      <!-- end of service section -->
+
+             <!-- start of contact section -->
             <div id="contact" class="contact-section section" tabindex="-1">
                 <div class="container">
                     <div class="section-content row">
@@ -442,38 +757,43 @@
                             <div class="text-box-inline">
                                 <span class="subtitle">contact</span>
                                 <h2>
-                                    You Have Any Project That Have Trouble Shoot?
+                                    Get in touch, and send me a message!
                                     <br> 
                                 </h2>
                                 <p>
-                                    Get in touch and let me know how i can help. Copy the example form behind and i’ll be in touch as soon as possible by email.
+                                    To get support, fill up the form and I will get back to you within 24 hours.
                                 </p>
                             </div>
 
                             <!-- contact info -->
                             <ul class="contact-info">
                                 <li>
-                                    <img src="assets/images/icons/location.png" alt="Location">
+                                    <img src="assets/images/icons/email.png" alt="Email">
                                     <div>
-                                        <strong>Location:</strong> Asia/Manila | Philippines
+                                        <strong>Email:</strong> 
+                                      <ul>
+                                         <li><a href="mailto:cm122927@gmail.com">cm122927@gmail.com <span class="iconify" data-icon="ic:round-verified" style="color: #09e44e;"></span></a></li>
+                                         <li><a href="mailto:hatry4@gmail.com">hatry4@gmail.com <span class="iconify" data-icon="ic:round-verified" style="color: #099ee4;"></span></a></li>
+                                      </ul>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="https://img.icons8.com/material/100/000000/discord-logo--v1.png" alt="Phone">
+                                    <img src="assets/images/icons/location.png" alt="Loction">
                                     <div>
-                                        <strong>Discord:</strong>
+                                        <strong>Location:</strong>
                                         <ul>
-                                            <li><a href="https://discord.gg/2x3HCgg4d9" class="ltr-dir">Light Devs™</a></li>
+                                            <li>Philippines, Asia/Manila</li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
-                                    <img src="assets/images/icons/email.png" alt="Email">
+                              <li>
+                                    <img src="assets/images/icons/discord.png" alt="Discord">
                                     <div>
-                                        <strong>Email:</strong>
+                                        <strong>Discord:</strong>
                                         <ul>
-                                            <li><a href="mailto:cm122927@gmail.com">cm122927@gmail.com</a></li>
-                                            <li><a href="mailto:hatry4@gmail.com">hatry4@gmail.com</a></li>
+                                          <li><a href="https://discordapp.com/users/573709909594734603 
+" class="ltr-dir">&#60;&#47;&#62; Devhatry4#3429</a></li>
+                                          <li><a href="https://kryptonite.tk" class="ltr-dir">Kryptonite Developemnt</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -487,24 +807,24 @@
 
                         <!-- contact form -->
                         <div class="col-lg-6">
-                            <form ref="contactForm" class="contact-form form-styled" action="contact_form.php" data-success-msg="Message sent successfully!" data-err-msg="Oops! something went wrong, please try again.">
+                            <form ref="contactForm" class="contact-form form-styled" action="https://formsubmit.co/cm122927@gmail.com" data-success-msg="Message sent successfully!" data-err-msg="Oops! something went wrong, please try again." method="POST">
                                 <div class="group">
                                     <label>Name</label>
                                     <div class="control has-prefix-icon">
-                                        <input type="text" name="name" placeholder="Name" minlength="3" required>
+                                        <input type="text" name="name" placeholder="Name" minlength="2" required>
                                         <i class="fa fa-user-circle prefix-icon" aria-hidden="true"></i>
 
                                         <!-- validation errors messages -->
                                         <div class="errors-msgs">
                                             <input class="required" type="hidden" value="Name is required">
-                                            <input class="minLength" type="hidden" value="Name must be at least 3 characters">
+                                            <input class="minLength" type="hidden" value="Name must be at least 2 characters">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="group">
                                     <label>Email</label>
                                     <div class="control has-prefix-icon">
-                                        <input class="ltr-dir" type="email" inputmode="email" name="email" placeholder="Ex. Email@email.com" required>
+                                        <input class="ltr-dir" type="email" inputmode="email" name="email" placeholder="you@example.com" required>
                                         <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
 
                                         <!-- validation errors messages -->
@@ -512,6 +832,7 @@
                                             <input class="required" type="hidden" value="Email is required">
                                             <input class="invalid" type="hidden" value="Please enter a valid email address">
                                         </div>
+                                      
                                     </div>
                                 </div>
                                 <div class="group phone-number">
@@ -529,7 +850,7 @@
                                 <div class="group">
                                     <label>Message</label>
                                     <div class="control has-prefix-icon">
-                                        <textarea name="message" placeholder="Write message..." required></textarea>
+                                        <textarea name="message" placeholder="Write your message..." required></textarea>
                                         <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
 
                                         <!-- validation errors messages -->
@@ -540,8 +861,7 @@
                                 </div>
                                 <div class="group">
                                     <div class="control">
-                      <a href="" target="_blank" rel="noreferrer" v-tooltip="{text: 'Ex. Email cm122927@gmail.com with your topic. ', dir: 'buttom'}">
-                      <i class="fa fa-question" aria-hidden="true"></i></a>
+                                        <button class="submit-btn btn btn-dark" type="button" @click="contactFormValidation">Send</button>
                                     </div>
                                 </div>
                             </form>
@@ -550,26 +870,32 @@
                 </div>
             </div>
             <!-- end of contact section -->
-
+            
             <!-- start of footer -->
             <footer>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
                             <!-- logo -->
-                            <div class="logo" title="Devhatry4">
-                                <h1><a href="index.html">Devhatry4</a></h1>
+                            <div class="logo" title="hatry4">
+                                <h1><a href="#">Hatry4</a></h1>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            &copy; Created by
-                            <a href="https://github.com/hatry4" target="_blank" rel="noopener">Devhatry4</a>
+                          <div class="motto"><p>"Developer is organism that turns coffee to code."</p></div>
+                              
+                                </ul>
+                              </div>
+                                        <div class="col-lg-6">
+                            <div><br></div>
+                          &copy; Developed by
+                            <a href="https://www.hatry4.xyz/profile/Devhatry4" target="_blank" rel="noopener">Hatry4</a>
                         </div>
                     </div>
                 </div>
+              </div>
             </footer>
             <!-- end of footer -->
 
+            
             <!-- scroll to top button -->
             <button ref="scrollTopBtn" :class="['scroll-to-top', isScrollTopBtnDisplayed && 'show-scrollTop']" title="Back To Top" tabindex="0" @click="scrollToTop">
           <i class="fa fa-angle-up" aria-hidden="true"></i>
@@ -586,22 +912,32 @@
                 </transition-group>
             </ul>
 
-            <!-- ajax loading -->
+            <!-- ajax loading 
             <div v-show="isAjaxLoading" class="ajax-loading">
                 <span></span>
             </div>
         </div>
     </div>
-
+-->      
     <!-- js plugins file -->
-    <script src="scripts/plugins.min.js"></script>
+    <script src="data/scripts/plugins.min.js"></script>
 
     <!-- main script file -->
-    <script src="scripts/main.js"></script>
+    <script src="data/scripts/main.js"></script>
 
-    <!-- script script file -->
-    <script src="scripts/script.js"></script>
+    <!-- script js file -->
+    <script src="data/scripts/script.js"></script>
+
+    <!-- script js file -->
+    <script src="data/scripts/clarity.js"></script>
     
-</body>
+    <!-- iconify plugin file -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 
-</html>
+    <!-- fontawesome plugin file -->
+    <script src="https://kit.fontawesome.com/c1a5282429.js" crossorigin="anonymous"></script>
+            <script src="https://use.fortawesome.com/1ce05b4b.js" crossorigin="anonymous"></script>
+            <script src="https://use.fortawesome.com/349cfdf6.js" crossorigin="anonymous"></script>
+            
+<!-- Code by </> Devhatry4#3429 -->
+      <!-- Credits to hatry4 / charles -->

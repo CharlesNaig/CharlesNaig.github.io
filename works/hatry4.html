@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta Data-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hatry4, Devhatry4, Programming, Front-end Developer, Html, Css, JavaScript, PHP, TypeScript, Sass, Student, Gamer">
+    <meta name="author" content="</> Devhatry4">
+    <meta property="og:site_name" content="Hatry4">
+    <meta property="og:image" content="https://tr.rbxcdn.com/019e5753db73698e7a15f99489f468c2/500/280/Image/Jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hatry4.xyz">
+    <meta property="og:title" content="Hatry4 - &copy;hatry4.xyz.zip">
+    <meta name="theme-color" content="#85ffca">
+    <meta name="description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to develop and design websites. And I’m a Front End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚"/>
+  
+    <!-- Meta Twitter Data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hatry4qt">
+    <meta property="twitter:title" content="Hatry4 offical website">
+    <meta name="twitter:creator" content="@hatry4qt">
+    <meta name="twitter:description" content="
+      Hi! my name is Charles Marcelo, I was born December 29, 2007, and I am from the Philippines since I'm a teenager I was trying now to learn to develop and design websites. And I’m a Front End Developer, Gamer, and Student Fun fact is I still play games.
+      
+      Made width love by hatry4. 💚"/>
+  ">
+    <meta name="twitter:image" content="./assets/images/view.png">
+    
+     
+    <!-- title of the browser tab -->
+    <title>Hatry4 - &copy;hatry4.xyz.zip</title>
+
+    <!-- Font and Icons  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.1.1/css/all.css">
+	  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/images/logo/hatry4.ico">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Saira+Stencil+One&text=Hatry4&display=swap">
+  
+
+    <!-- css libraries file -->
+    <link rel="stylesheet" href="../data/styles/css/libraries.min.css">
+
+    <!-- css main style file -->
+    <link rel="stylesheet" href="../data/styles/css/style.css">
+
+    <!-- scss libraries file -->
+    <link rel="stylesheet/scss" href="../data/styles/scss/libraries.min.scss" type="text/css">
+
+    <!-- scss main files-->
+    <link rel="stylesheet/scss" href="../data/styles/scss/style.scss" type="text/css">
+
+</head>
+
+<body>
+    <div id="app">
+      <div id="app-inner" ref="appRef"
+        :class="[savedTheme, {'enable-focus-style': isAnyFocus}]"
+        @click="isAnyFocus = false"
+        @keyup.tab="isAnyFocus = true">
+
+          <!-- start preloader-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <div id="preloader">
+            <div class="loader">
+              <ul>
+                <h1 class="loader_text" id="loader_text">H</h1>
+              </ul>
+             <div class="loader_bar" id="loader_bar"></div>
+           </div>
+          </div>
+        <!-- end preloader-->
+
+            <!-- start of header -->
+        <header class="hide-in-preloading" :class="{
+          'big-header': isHeaderBig,
+          'small-header': !isHeaderBig,
+          'header-hidden': isHeaderHidden
+        }">
+                <div class="container">
+                    <!-- logo -->
+                    <div class="logo" title="Hatry4">
+                        <h1><a href="#">Hatry4</a></h1>
+                    </div>
+
+                    <!-- nav links -->
+                    <nav :class="{'menu-open': isNavMenuOpen}" ref="headerNav">
+
+                        <!-- nav menu links -->
+                        <ul class="nav-links">
+                            <li v-for="link in navLinks" :key="link.url">
+                                <a :href="link.url" @click="closeNavMenu">
+                    {{ link.title.en }}
+                  </a>
+                            </li>
+                        </ul>
+
+                        <!-- menu content in big devices (hidden in mobile/tablet) --> 
+                        <div class="desktop-menu-content" tabindex="-1">
+                            <div class="container">
+
+                                <!-- about us -->
+                                <div class="about-us">
+                                    <p>
+                                        Hi! I’m Charles or hatry4, and I’m a Front End developer who has feature to be a professional full stack developer and I enjoying to code like JavaScript, Html, Css, and more. I’m always trying learn new language, tools, and skills. And i’m still looking for Developer Team. Fun fact I play games and go to the School Always.
+                                    </p>
+                                </div>
+
+                                <!-- contact info -->
+                                <ul class="contact-info row">
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Email</h4>
+                                        <ul>
+                                          <li><a href="mailto:cm122927@gmail.com">• cm122927@gmail.com</a></li>
+                                            <li><a href="mailto:hatry4@gmail.com">• hatry4@gmail.com</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Location</h4>
+                                        <ul>
+                                            <li>
+                                                • Asia/Manila | Philippines
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <h4 class="block-title">Discord</h4>
+                                        <ul>
+                                          <li><a href="https://discord.com/users/573709909594734603" class="ltr-dir">• &#60;&#47;&#62; Devhatry4#3429</a></li>
+                                          <li><a href="https://discord.gg/2x3HCgg4d9" class="ltr-dir">• Kryptonite</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- options icons -->
+                    <ul class="options-icons">
+                      
+                        <!-- theme switcher button -->
+                        <li class="theme-switcher">
+                            <button :class="savedTheme" title="Change Mode" @click="changeAppTheme"></button>
+                        </li>
+
+                        <!-- hamburger button -->
+                        <li class="hamburger-btn" :class="{'open': isNavMenuOpen}">
+                            <button @click="toggleNavMenu" title="Toggle Side Menu" aria-label="Toggle Side Menu" ref="navMenuToggleBtn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!-- end of header -->
+
+        <!-- start of portfolio page -->
+        <div class="portfolio-page portfolio-section section page">
+          <div class="container">
+            <div class="section-content">
+
+              <!-- portfolio items -->
+              <ul class="portfolio-items has-works" ref="portfolioItems">
+                <li>
+                  <!-- text box -->
+                  <div class="text-box-block">
+                    <span class="subtitle">
+                      <a>hatry4</a>
+                    </span>
+                    <h2>Hatry4.xyz - hatry4 website</h2>
+                    <p>This is my official website you can download this for free you can also donate or sponsor. You can read the<a href="https://www.docs.hatry4.xyz" style="color: #33eb9b; font-weight: bolder;"> Documentation </a>and follow everything on it, step by step. I will add all sub-pages to the file. If you are re-creating my website please don't delete the license and copyright from my files.</p>
+                    <ul class="work-tools">
+                      <li for="languages" key="languages=">
+                        <a><span class="iconify" data-icon="akar-icons:html-fill"></span> Html</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:css-fill"></span> Css</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:javascript-fill"></span> Javascript</a>
+                      </li><li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:sass-fill"></span> Sass</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:php-fill"></span> Php</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="bxl:vuejs"></span> Vuejs</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:react-fill"></span> Reactjs</a>
+                      </li>
+                      <li for="languages" key="languages">
+                        <a><span class="iconify" data-icon="akar-icons:jquery-fill"></span> jQuery</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><span class="iconify" data-icon="cib:adobe-photoshop"></span> Photoshop</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><span class="iconify" data-icon="akar-icons:vscode-fill"></span> Visual studio code</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><span class="iconify" data-icon="simple-icons:replit"></span> Replit</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><span class="iconify" data-icon="akar-icons:github-fill"></span> Github</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><i class="fa-solid fa-font-awesome"></i> Font awesome</a>
+                      </li>
+                      <li for="languages" key="tools">
+                        <a><span class="iconify" data-icon="simple-icons:iconify"></span> Iconify</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btns-container">
+                  <a href="../downloads/#" class="btn btn-primary">Download</a>
+                  <a href="donate.html" class="btn btn-outline-light">Donate</a>
+                </div>
+                </li>
+                <!-- start items list -->
+                <li class="portfolio-item"
+                  for="screenshot in getSinglePortfolioItem.screenshots"
+                  key="">
+                  <!-- href points to the fully sized image -->
+                  <a class="glightbox" target="_blank" rel="noopener" data-gallery="gallery1"
+                    href="#"
+                    data-glightbox="hatry4">
+                    <div class="item-img">
+                      <!-- thumbnails -->
+                      <img src="../assets/images/hatry4-banner.png" alt="hatry4">
+                    </div>
+                    <div class="item-details">
+                      <h3 class="title">Hatry4.xyz - hatry4 website</h3>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of portfolio page -->
+
+        <!-- start of footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- logo -->
+                            <div class="logo" title="hatry4">
+                                <h1><a href="#">Hatry4</a></h1>
+                            </div>
+                            <p><br></p>
+                          <div class="footer-menu-main-content">
+                            <div class="footer-menu-wrapper">
+                              <div class="margin-bottom-30px">
+                                <h6>Menu</h6>
+                              </div>
+                              <div class="footer-menu-content">
+                                <ul role="list" class="footer-nav w-list-unstyled">
+                                  <li class="footer-nav-item">
+                                    <a href="#home">Home</a></li>
+                                  <li class="footer-nav-item">
+                                    <a href="#about">About</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#skills">Skills</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#experience">Experience</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#works">Portfolio</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#gallery">Gallery</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#services">Services</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="#contact">Contact</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="footer-menu-wrapper last">
+                              <div class="margin-bottom-30px">
+                                <h6>Pages</h6>
+                              </div>
+                              <div class="footer-menu-content">
+                                <ul role="list" class="footer-nav w-list-unstyled">
+                                  <li class="footer-nav-item">
+                                    <a href="https://www.docs.hatry4.xyz">Docs</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="https://www.status.hatry4.xyz">Status</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="under-construction.html">Contact</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="FAQ.html">FAQ</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="donate.html">Donate</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="under-construction.html">Under Construction</a>
+                                  </li>
+                                  <li class="footer-nav-item">
+                                    <a href="404.html">404 Error</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                          &copy; Developed by
+                            <a href="https://www.hatry4.xyz/profile/Devhatry4" target="_blank" rel="noopener">Hatry4</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </footer>
+            <!-- end of footer -->
+
+            
+            <!-- scroll to top button -->
+            <button ref="scrollTopBtn" :class="['scroll-to-top', isScrollTopBtnDisplayed && 'show-scrollTop']" title="Back To Top" tabindex="0" @click="scrollToTop">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </button>
+
+            <!-- toast notifications -->
+            <ul class="notifications-container">
+                <transition-group name="notify">
+                    <li v-for="notify of notifications" :key="notify.id" :id="notify.id" :class="['notification', 'show', notify.className, notify.time && 'timer']">
+                        {{ notify.msg }}
+                        <i class="fa fa-times link-hover" aria-hidden="true" @click="dismissNotify(notify.id)"></i>
+                        <span v-if="notify.time" class="disappearing-time" :style="{ 'animation-duration': notify.time + 'ms' }"></span>
+                    </li>
+                </transition-group>
+            </ul>
+
+            <!-- ajax loading -->
+            <div v-show="isAjaxLoading" class="ajax-loading">
+                <span></span>
+            </div>
+        </div>
+    </div>
+      
+    <!-- js plugins file -->
+    <script src="../data/scripts/plugins.min.js"></script>
+
+    <!-- main script file -->
+    <script src="../data/scripts/main.min.js"></script>
+
+    <!-- script js file -->
+    <script src="../data/scripts/script.js"></script>
+
+    <!-- script js file -->
+    <script src="../data/scripts/clarity.js"></script>
+    
+    <!-- iconify plugin file -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+
+    <!-- fontawesome plugin file -->
+    <script src="https://kit.fontawesome.com/c1a5282429.js" crossorigin="anonymous"></script>
+            
+<!-- Code by </> Devhatry4#3429 -->
+      <!-- Credits to hatry4 / charles -->
