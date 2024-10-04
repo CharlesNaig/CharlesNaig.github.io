@@ -1,7 +1,7 @@
-# hatry4.xyz
+# Updating
 
 Hatry4 Official Website.
 Linked at 
-## https://www.hatry4.xyz
+## CharlesNaig
 
 Made with love 💗 
