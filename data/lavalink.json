@@ -1,0 +1,36 @@
+[
+    {
+      "id": "1",
+      "authorId": "573709909594734603",
+      "host": "lavalink01.techbyte.host",
+      "identifier": "CharlesNaig",
+      "password": "NAIGLAVA-dash.techbyte.host",
+      "port": 2036,
+      "restVersion": "v4",
+      "secure": false,
+      "isConnected": true,
+      "info": {
+        "version": "v4",
+        "buildTime": null,
+        "git": { "branch": "null", "commit": "nulll", "commitTime": 0 },
+        "jvm": "17.0.12",
+        "lavaplayer": "2.2.2",
+        "sourceManagers": ["18"],
+        "filters": ["Volume", "Equalizer", "Karaoke", "Timescale", "Tremolo", "Vibrato", "Distortion", "Rotation", "ChannelMix", "LowPass"],
+        "plugins": ["jiosaavn-plugin@0.1.7", "DuncteBot-plugin@1.7.0", "sponsorblock-plugin@3.0.1", "lavalyrics-plugin@1.0.0", "lavasearch-plugin@1.0.0", "youtube-plugin@1.8.3", "lavasrc-plugin@4.2.0"]
+      },
+      "author": {
+        "avatar": "https://cdn.discordapp.com/avatars/573709909594734603/a_e512993d0cea3917bd2e9c16c7f7b5db.webp?size=128",
+        "username": "hatry4",
+        "url": "https://discord.com/users/573709909594734603"
+      },
+      "memory": "200 MB/286 MB",
+      "connections": "9/77",
+      "systemLoad": "0.04%",
+      "cpuCores": 1,
+      "uptime": "7d",
+      "cpu": "10.0%",
+      "createdAt": "2024-04-24T16:25:01.000Z",
+      "updatedAt": "2024-05-03T10:55:01.000Z"
+    }
+]
